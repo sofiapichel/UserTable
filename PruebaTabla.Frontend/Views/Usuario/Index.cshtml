@@ -1,0 +1,35 @@
+﻿
+@{
+    Layout = "_Layout";
+}
+
+
+<div class="container-fluid">
+    <div class="title  text-sm-center text-md-center text-lg-center title-tablaUsuarios-IndexUsuario">TABLA USUARIOS</div>
+
+    <div class="row">
+        <div class="col-lg-12 col-md-12 col-sm-12">
+
+            <div id="view-all-usuario">
+            </div>
+
+        </div>
+    </div>
+</div>
+
+
+
+<script>
+        //Ver la partial view de Usuario
+        $(document).ready(function () {
+            $('#view-all-usuario').load('@Url.Action("_ViewAllUsuario", "Usuario")');
+
+        });
+</script>
+
+
+
+
+
+@section scripts {
+}

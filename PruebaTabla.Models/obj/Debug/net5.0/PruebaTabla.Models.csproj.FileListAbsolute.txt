@@ -1,0 +1,12 @@
+C:\Users\spichel\Documents\.NET-SMS\PROJECTS\PruebaTablas\PruebaTabla.Frontend\PruebaTabla.Models\bin\Debug\net5.0\PruebaTabla.Models.deps.json
+C:\Users\spichel\Documents\.NET-SMS\PROJECTS\PruebaTablas\PruebaTabla.Frontend\PruebaTabla.Models\bin\Debug\net5.0\PruebaTabla.Models.dll
+C:\Users\spichel\Documents\.NET-SMS\PROJECTS\PruebaTablas\PruebaTabla.Frontend\PruebaTabla.Models\bin\Debug\net5.0\ref\PruebaTabla.Models.dll
+C:\Users\spichel\Documents\.NET-SMS\PROJECTS\PruebaTablas\PruebaTabla.Frontend\PruebaTabla.Models\bin\Debug\net5.0\PruebaTabla.Models.pdb
+C:\Users\spichel\Documents\.NET-SMS\PROJECTS\PruebaTablas\PruebaTabla.Frontend\PruebaTabla.Models\obj\Debug\net5.0\PruebaTabla.Models.csproj.AssemblyReference.cache
+C:\Users\spichel\Documents\.NET-SMS\PROJECTS\PruebaTablas\PruebaTabla.Frontend\PruebaTabla.Models\obj\Debug\net5.0\PruebaTabla.Models.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\spichel\Documents\.NET-SMS\PROJECTS\PruebaTablas\PruebaTabla.Frontend\PruebaTabla.Models\obj\Debug\net5.0\PruebaTabla.Models.AssemblyInfoInputs.cache
+C:\Users\spichel\Documents\.NET-SMS\PROJECTS\PruebaTablas\PruebaTabla.Frontend\PruebaTabla.Models\obj\Debug\net5.0\PruebaTabla.Models.AssemblyInfo.cs
+C:\Users\spichel\Documents\.NET-SMS\PROJECTS\PruebaTablas\PruebaTabla.Frontend\PruebaTabla.Models\obj\Debug\net5.0\PruebaTabla.Models.csproj.CoreCompileInputs.cache
+C:\Users\spichel\Documents\.NET-SMS\PROJECTS\PruebaTablas\PruebaTabla.Frontend\PruebaTabla.Models\obj\Debug\net5.0\PruebaTabla.Models.dll
+C:\Users\spichel\Documents\.NET-SMS\PROJECTS\PruebaTablas\PruebaTabla.Frontend\PruebaTabla.Models\obj\Debug\net5.0\ref\PruebaTabla.Models.dll
+C:\Users\spichel\Documents\.NET-SMS\PROJECTS\PruebaTablas\PruebaTabla.Frontend\PruebaTabla.Models\obj\Debug\net5.0\PruebaTabla.Models.pdb

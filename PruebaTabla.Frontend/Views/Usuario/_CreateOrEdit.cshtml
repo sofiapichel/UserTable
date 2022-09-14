@@ -1,0 +1,80 @@
+﻿@model PruebaTabla.Models.Usuario
+@{
+    Layout = null;
+}
+
+<div class="row">
+        <div class="col-md-12">
+            <form asp-action="AddOrEdit" asp-route-id="@Model.Id" onsubmit="return jQueryAjaxPost(this);">
+                <div asp-validation-summary="ModelOnly" class="text-danger"> </div>
+                    <input type="hidden" asp-for="Id" />
+                    <div class="form-group">
+                        <label asp-for="Nombre" class="control-label"></label>
+                        <input asp-for="Nombre" class="form-control" id="Nombre" />
+                        <span asp-validation-for="Nombre" class="text-danger"></span>
+
+                        <!--NOMBRE 2-->
+                        <label asp-for="Nombre2" class="control-label"></label>
+                        <input asp-for="Nombre2" class="form-control" id="Nombre2" />
+                        <span asp-validation-for="Nombre2" class="text-danger"></span>
+
+                        <!--Edad-->
+                        <label asp-for="Edad" class="control-label"></label>
+                        <input asp-for="Edad" class="form-control" id="Edad" />
+                        <span asp-validation-for="Edad" class="text-danger"></span>
+                        <!--Edad2-->
+                        <label asp-for="Edad2" class="control-label"></label>
+                        <input asp-for="Edad2" class="form-control" id="Edad2" />
+                        <span asp-validation-for="Edad2" class="text-danger"></span>
+                        <!--FechaInscripcion-->
+                        <label asp-for="FechaInscripcion" class="control-label"></label>
+                        <input asp-for="FechaInscripcion" class="form-control" id="FechaInscripcion" />
+                        <span asp-validation-for="FechaInscripcion" class="text-danger"></span>
+                        <!--FechaInscripcion2-->
+                        <label asp-for="FechaInscripcion2" class="control-label"></label>
+                        <input asp-for="FechaInscripcion2" class="form-control" id="FechaInscripcion2" />
+                        <span asp-validation-for="FechaInscripcion2" class="text-danger"></span>
+                        <!--Email-->
+                        <label asp-for="Email" class="control-label"></label>
+                        <input asp-for="Email" class="form-control" id="Email" />
+                        <span asp-validation-for="Email" class="text-danger"></span>
+                        <!--Email2-->
+                        <label asp-for="Email2" class="control-label"></label>
+                        <input asp-for="Email2" class="form-control" id="Email2" />
+                        <span asp-validation-for="Email2" class="text-danger"></span>
+                        <!--Password-->
+                        <label asp-for="Password" class="control-label"></label>
+                        <input asp-for="Password" class="form-control" id="Password" />
+                        <span asp-validation-for="Password" class="text-danger"></span>
+                        <!--Password2-->
+                        <label asp-for="Password2" class="control-label"></label>
+                        <input asp-for="Password2" class="form-control" id="Password2" />
+                        <span asp-validation-for="Password2" class="text-danger"></span> <!--NumeroDecimal-->
+                        <label asp-for="NumeroDecimal" class="control-label"></label>
+                        <input asp-for="NumeroDecimal" class="form-control" id="NumeroDecimal" />
+                        <span asp-validation-for="NumeroDecimal" class="text-danger"></span>
+                        <!--NumeroDecimal-->
+                        <label asp-for="NumeroDecimal2" class="control-label"></label>
+                        <input asp-for="NumeroDecimal2" class="form-control" id="NumeroDecimal2" />
+                        <span asp-validation-for="NumeroDecimal2" class="text-danger"></span>
+                </div>
+
+                <div class="mt-3">
+
+                    <button type="submit" class="btn btn-primary btn-sm text-white pull-right">
+                        <i class="fa fa-check text-white"></i>
+                        @(Model.Id > 0 ? "Actualizar" : "Crear")
+                    </button>
+
+                    <button type="button" class="btn btn-sm btn-dark text-white" data-bs-dismiss="modal" aria-label="Close">
+                        <i class="fa fa-close text-white"></i> Cancelar
+                    </button>   
+
+                </div>
+            </form>
+        </div>
+    </div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

@@ -1,0 +1,149 @@
+﻿@model IEnumerable<PruebaTabla.Models.Usuario>
+@{
+    ViewData["Title"] = "Usuarios";
+}
+
+<div class="row">
+    <div class="col-lg-12 col-md-12">
+        <div class="container-fluid">
+
+            <!--Nuevo usuario-->
+            <div class="mb-2">
+                <a onclick="showInPopup('@Url.Action("_CreateOrEdit","Usuario",new {id=0},Context.Request.Scheme)','Nuevo Usuario','Descripcion')" class="button-28" style="cursor:pointer;  margin-top:25px; ">
+                    <i class="fa fa-plus "></i> Nuevo usuario
+                </a>
+
+
+            </div>
+
+
+            <table id="mitabla" class="table table-light table-striped  bdr">
+                <thead class="table" style="background-color: #9ecae9;">
+                    <tr>
+                        <th>
+                            @Html.DisplayNameFor(model => model.Nombre)
+                        </th>
+                        <th>
+                            @Html.DisplayNameFor(model => model.Nombre2)
+                        </th>
+                        <th>
+                            @Html.DisplayNameFor(model => model.Edad)
+                        </th>
+                        <th>
+                            @Html.DisplayNameFor(model => model.Edad2)
+                        </th>
+                        <th>
+                            @Html.DisplayNameFor(model => model.FechaInscripcion)
+                        </th>
+                        <th>
+                            @Html.DisplayNameFor(model => model.FechaInscripcion2)
+                        </th>
+                        <th>
+                            @Html.DisplayNameFor(model => model.Email)
+                        </th>
+                        <th>
+                            @Html.DisplayNameFor(model => model.Email2)
+                        </th>
+                        <th>
+                            @Html.DisplayNameFor(model => model.Password)
+                        </th>
+                        <th>
+                            @Html.DisplayNameFor(model => model.Password2)
+                        </th>
+                        <th>
+                            @Html.DisplayNameFor(model => model.NumeroDecimal)
+                        </th>
+                        <th>
+                            @Html.DisplayNameFor(model => model.NumeroDecimal2)
+                        </th>
+                        <th>
+                            Acciones
+                        </th>
+
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var item in Model)
+                    {
+                        <tr class="row-hover">
+                            <td>
+                                @Html.DisplayFor(modelItem => item.Nombre)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.Nombre2)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.Edad)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.Edad2)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.FechaInscripcion)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.FechaInscripcion2)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.Email)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.Email2)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.Password)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.Password2)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.NumeroDecimal)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.NumeroDecimal2)
+                            </td>
+
+                            <td style="text-align:center;">
+
+                                <!--Modificar usuario-->
+                                <a style="cursor:pointer;" onclick="showInPopup('@Url.Action("_CreateOrEdit","Usuario",new {id=@item.Id},Context.Request.Scheme)','Modificar usuario','Descripcion')" class="btn btn-sm btn-light text-white" data-bs-toggle="tooltip" data-bs-placement="top" title="Modificar"><i class="fa fa-pencil text-dark"></i></a>
+
+                                <!--Eliminar usuario-->
+                                <form asp-action="Delete" asp-route-id="@item.Id" onsubmit="return jQueryAjaxDelete(this)" class="d-inline">
+
+                                    <button type="submit" class="btn btn-sm text-white" style="background-color: #161616;" data-bs-toggle="tooltip" data-bs-placement="top" title="Eliminar">
+                                        <i class="fa fa-trash text-white"></i>
+                                    </button>
+                                </form>
+
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+
+            <a class="btn btn-sm btn-success" asp-action="ExportarExcel" asp-controller="Usuario">
+                <i class="bi bi-file-earmark-excel"></i>Exportar Excel
+            </a>
+            <a class="btn btn-sm btn-danger" asp-action="InformeUsuarios" asp-controller="Informes">
+                <i class="bi bi-filetype-pdf"></i>Exportar PDF
+            </a>
+
+        </div>
+
+    </div>
+</div>
+
+
+@*DATATBLE*@
+<script>
+    let table = new DataTable('#mitabla', {
+        scrollX: true,
+        deferRender: true,
+        scroller: true,
+    });
+</script>
+
+
+
+

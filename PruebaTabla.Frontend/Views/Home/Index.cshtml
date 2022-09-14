@@ -1,0 +1,37 @@
+﻿
+@{
+    Layout = "_Layout";
+}
+
+<div class="row" style="height:100%">
+    <div class="col-lg-7 col-md-8 col-sm-8 home-text">
+        <p class="bienvenido-home">BIENVENIDO A</p>
+        <br />
+        <h1 class="title-tablaUsuarios-home">TABLA DE<br /> USUARIOS</h1>
+        <p class="link">
+            <a class="link-IrATabla-home" asp-action="Index" asp-controller="Usuario">IR A TABLA </a>
+        </p>
+
+    </div>
+
+    <div class="col-lg-5 col-md-4 col-sm-4 bg-azul ">
+        <img class="img-home" src="~/images/cafe-img-home.jpg" />
+    </div>
+
+</div>
+
+
+
+<script>
+
+    $(window).on('load', function () {
+        $('#loading').hide();
+    })
+
+    $(document).ajaxStart(function () {
+        $("#loading").show();
+    }).ajaxStop(function () {
+        $("#loading").hide();
+    });
+
+</script>
