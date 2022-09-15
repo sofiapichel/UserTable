@@ -151,6 +151,10 @@
               "target": "Package",
               "version": "[5.0.17, )"
             },
+            "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
+              "target": "Package",
+              "version": "[5.0.2, )"
+            },
             "iTextSharp": {
               "target": "Package",
               "version": "[5.5.4, )"

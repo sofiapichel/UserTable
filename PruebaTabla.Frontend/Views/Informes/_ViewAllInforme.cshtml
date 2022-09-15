@@ -1,0 +1,134 @@
+﻿
+@model List<PruebaTabla.Models.Usuario>
+@{
+    //Layout = "_LayoutInformes";
+    ViewData["Title"] = "_ViewAllInforme";
+
+}
+
+<style>
+    th {
+        background-color: #183ce6;
+        color: #ffffff;
+        font-size: 14px;
+        font-weight: bold;
+        line-height: 20px;
+        padding: 5px 2px;
+        word-break: break-all;
+        overflow-wrap: break-word;
+        word-break: break-word;
+    }
+    tr {
+        border-top: 1px solid #000000;
+    }
+    table {
+        width: 80%;
+        margin: 0 auto;
+        border-radius: 40px;
+        overflow: hidden;
+        border-collapse: separate;
+        border-spacing: 0;
+        border: 1px solid #000000;
+        table-layout: fixed;
+    }
+</style>
+
+<h2>Información personal del usuario</h2>
+<br />
+<table cellspacing="1" cellpadding="10">
+    <thead>
+        <tr>
+            <th style=" width:10%">ID </th>
+            <th style=" width:20%">NOMBRE </th>
+
+            <th style=" width:20%">NOMBRE 2</th>
+
+            <th style=" width:25%">EDAD </th>
+
+            <th style=" width:25%">EDAD 2 </th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr style="font-weight: 700; border-top:1px solid #000000;">
+                <td>@item.Id</td>
+                <td>@item.Nombre</td>
+                <td>@item.Nombre2</td>
+                <td>@item.Edad</td>
+                <td>@item.Edad2</td>
+            </tr>
+
+        }
+    </tbody>
+
+</table>
+<br />
+
+<h2>Fecha de inscripción del usuario y Email</h2>
+
+<br />
+<table cellspacing="1" cellpadding="10">
+    <thead>
+        <tr>
+            <th style=" width:10%">ID </th>
+
+            <th style=" width:25%">FECHA INSCRIPCIÓN </th>
+
+            <th style=" width:25%">FECHA INSCRIPCIÓN 2 </th>
+
+            <th style=" width:20%">EMAIL </th>
+
+            <th style=" width:20%">EMAIL 2 </th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr style="font-weight: 700">
+                <td>@item.Id</td>
+                <td>@item.FechaInscripcion</td>
+                <td>@item.FechaInscripcion2</td>
+                <td>@item.Email</td>
+                <td>@item.Email2</td>
+            </tr>
+
+        }
+    </tbody>
+
+</table>
+
+<br />
+
+<h2>Contraseña y Número decimal</h2>
+
+<br />
+<table cellspacing="1" cellpadding="10">
+    <thead>
+        <tr>
+            <th style=" width:10%">ID </th>
+
+            <th style=" width:25%">CONTRASEÑA </th>
+
+            <th style=" width:25%">CONTRASEÑA 2 </th>
+
+            <th style=" width:20%">NUMERO DECIMAL </th>
+
+            <th style=" width:20%">NUMERO DECIMAL 2 </th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr style="font-weight: 700; border-top:1px solid #000000;">
+                <td>@item.Id</td>
+                <td>@item.Password</td>
+                <td>@item.Password2</td>
+                <td>@item.NumeroDecimal</td>
+                <td>@item.NumeroDecimal2</td>
+            </tr>
+
+        }
+    </tbody>
+
+</table>

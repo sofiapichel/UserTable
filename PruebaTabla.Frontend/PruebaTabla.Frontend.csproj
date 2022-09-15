@@ -20,11 +20,16 @@
       <PrivateAssets>all</PrivateAssets>
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
     </PackageReference>
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="5.0.2" />
   </ItemGroup>
 
   <ItemGroup>
     <ProjectReference Include="..\PruebaTabla.DataAcces\PruebaTabla.DataAcces.csproj" />
     <ProjectReference Include="..\PruebaTabla.Models\PruebaTabla.Models.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="wwwroot\lib\templates\" />
   </ItemGroup>
 
 </Project>

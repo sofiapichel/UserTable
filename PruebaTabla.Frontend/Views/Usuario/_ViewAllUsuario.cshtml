@@ -1,4 +1,6 @@
 ﻿@model IEnumerable<PruebaTabla.Models.Usuario>
+
+
 @{
     ViewData["Title"] = "Usuarios";
 }
@@ -12,8 +14,6 @@
                 <a onclick="showInPopup('@Url.Action("_CreateOrEdit","Usuario",new {id=0},Context.Request.Scheme)','Nuevo Usuario','Descripcion')" class="button-28" style="cursor:pointer;  margin-top:25px; ">
                     <i class="fa fa-plus "></i> Nuevo usuario
                 </a>
-
-
             </div>
 
 
@@ -105,10 +105,10 @@
 
                             <td style="text-align:center;">
 
-                                <!--Modificar usuario-->
+                                @*Modificar usuario*@
                                 <a style="cursor:pointer;" onclick="showInPopup('@Url.Action("_CreateOrEdit","Usuario",new {id=@item.Id},Context.Request.Scheme)','Modificar usuario','Descripcion')" class="btn btn-sm btn-light text-white" data-bs-toggle="tooltip" data-bs-placement="top" title="Modificar"><i class="fa fa-pencil text-dark"></i></a>
 
-                                <!--Eliminar usuario-->
+                                @*Eliminar usuario*@
                                 <form asp-action="Delete" asp-route-id="@item.Id" onsubmit="return jQueryAjaxDelete(this)" class="d-inline">
 
                                     <button type="submit" class="btn btn-sm text-white" style="background-color: #161616;" data-bs-toggle="tooltip" data-bs-placement="top" title="Eliminar">
@@ -121,18 +121,20 @@
                     }
                 </tbody>
             </table>
-
-            <a class="btn btn-sm btn-success" asp-action="ExportarExcel" asp-controller="Usuario">
-                <i class="bi bi-file-earmark-excel"></i>Exportar Excel
-            </a>
-            <a class="btn btn-sm btn-danger" asp-action="InformeUsuarios" asp-controller="Informes">
-                <i class="bi bi-filetype-pdf"></i>Exportar PDF
-            </a>
-
         </div>
-
     </div>
 </div>
+
+<!--//AGREGARLOS A LA CARPETA TEMPLATES EN ROOT-->
+
+<a class="btn btn-sm btn-success" asp-action="ExportarExcel" asp-controller="Usuario">
+    <i class="bi bi-file-earmark-excel"></i>Exportar Excel
+</a>
+<a class="btn btn-sm btn-danger" asp-action="InformeUsuarios" asp-controller="Informes">
+    <i class="bi bi-filetype-pdf"></i>Exportar PDF
+</a>
+
+
 
 
 @*DATATBLE*@

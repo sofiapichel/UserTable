@@ -40,12 +40,18 @@ namespace PruebaTabla.Frontend.Controllers
             return View();
         }
 
+        public async Task<ActionResult> _ViewAllInforme()
+        {
+            var model = await _context.Usuarios.ToListAsync();
+            return PartialView("_ViewAllInforme", model);
+        }
+
 
         public async Task<FileResult> InformeUsuarios()
         {
 
             var model = await _context.Usuarios.ToListAsync();
-            var templatePath = "~/Views/Usuario/_ViewAllUsuario.cshtml";
+            var templatePath = "~/Views/Informes/_ViewAllInforme.cshtml";
             var htmlinner = await _viewService.RenderViewToStringAsync(ControllerContext, templatePath, model);
 
             string html = @"<?xml version=""1.0"" encoding=""UTF-8""?>" + htmlinner;

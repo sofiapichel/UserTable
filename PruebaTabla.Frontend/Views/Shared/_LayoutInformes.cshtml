@@ -1,0 +1,28 @@
+﻿
+    <head>
+
+        <title>TABLA USUARIO</title>
+
+        <link href="~/css/site.css" rel="stylesheet" />
+
+        @*BOOSTRAP CSS*@
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+
+
+    </head>
+
+    <body>
+
+        <div class="row">
+            <div class="col-12">
+                <img src="@Context.Request.Scheme://@Context.Request.Host.Value/images/logo-home.png" width="90" style="" />
+            </div>
+        </div>
+
+
+        <div class="container" style="min-height: 1000px;">
+            @RenderBody()
+        </div>
+
+    </body>
+
